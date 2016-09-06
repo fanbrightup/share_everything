@@ -35,18 +35,40 @@ router.post('/textUpload',(req,res)=>{
 })
 //  文件上传路由
 router.post('/upload',(req,res)=>{
-    var form = new formidable.IncomingForm();
-    form.encoding = 'utf8';
-    form.uploadDir = '/public/fanbrightFile/';
-    form.keepExtensions = true;
-    form.maxFieldsSize = 2*1024*1024;
-    form.parse(req,(err,fields,files)=> {
-      // fs.renameSync(files.upload.path,"/fanbrightFile/");
-      res.writeHead(200,{'content-type':'text/plain'});
-      res.write('received');
-      res.end(util.inspect({fields:fields,files:files}));
-    });
-    return ;
+    // var form = new formidable.IncomingForm();
+    // form.encoding = 'utf8';
+    // form.uploadDir = '/public/fanbrightFile/';
+    // form.keepExtensions = true;
+    // form.maxFieldsSize = 2*1024*1024;
+    // form.parse(req,(err,fields,files)=> {
+    //   // fs.renameSync(files.upload.path,"/fanbrightFile/");
+    //   res.writeHead(200,{'content-type':'text/plain'});
+    //   res.write('received');
+    //   res.end(util.inspect({fields:fields,files:files}));
+    // });
+    // return ;
+    var obj ={};
+    var form = new formidable.IncomingForm({
+       encoding:"utf-8",
+       uploadDir:"public/fanbrightFile",  //文件上传地址
+       keepExtensions:true  //保留后缀
+   });
+   form.parse(req)
+       .on('field', function(name, value) {  // 字段
+           obj[name] = value;
+       })
+       .on('file', function(name, file) {  //文件
+           obj[name] = file;
+       })
+       .on('error', function(error) {  //结束
+          //  callback(error);
+          console.log('error');
+       })
+       .on('end', function() {  //结束
+          //  callback(null,obj);
+          console.log('end');
+       });
+
     res.end('hhhhhhhhhh');
       // res.end();
   });
