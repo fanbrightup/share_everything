@@ -37,13 +37,12 @@ router.post('/textUpload',(req,res)=>{
 router.post('/upload',(req,res)=>{
     var form = new formidable.IncomingForm();
     form.encoding = 'utf8';
-    form.uploadDir = '/public/images';
+    form.uploadDir = '/public/fanbrightFile/';
     form.keepExtensions = true;
     form.maxFieldsSize = 2*1024*1024;
     form.parse(req,(err,fields,files)=> {
-      fs.renameSync(files.upload.path,"/fanbrightFile/");
+      // fs.renameSync(files.upload.path,"/fanbrightFile/");
       res.writeHead(200,{'content-type':'text/plain'});
-
       res.write('received');
       res.end(util.inspect({fields:fields,files:files}));
     });
