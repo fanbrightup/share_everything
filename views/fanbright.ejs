@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/fanbright.css">
+    <script src='/javascripts/showFile.js'></script>
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>这是 <%= title %> 页面</p>
+    <p>下面是下载选项</p>
+<!--显示所拥有的文件  -->
+    <div id='show_myfile_div'>
+      <!--函数名后要有()括号  -->
+      <input type="button" onclick="show_my_file()" value="显示我的文件">
+      <div id='myfileDiv'>我的文件</div>
+    </div>
+
+<!--预览  -->
+    <div id='show_article'>
+      <input type='button' onclick="show_my_article()" value="预览图片">
+      <p id='p_article_place'>这是预览的位置</p>
+    </div>
+
+<!--写入文本自动生成文件区  -->
+    <div id='text_upload'>
+      <form action="http://localhost:3000/fanbright/textUpload" method="POST">
+          <p>在下方的文本框中输入信息,并输入文件名,点击上传即可生成文件</p>
+          <textarea name="textContent"  cols="30" rows="10"></textarea>
+          <br>
+          <input type="text" name='textName' hint='要保存的文件名'>
+          <button >上传</button>
+      </form>
+
+
+    </div>
+
+
+
+<!-- 上传 -->
+    <div id='upload_myfile_div'>
+      <form class="upload_form" action="http://localhost:3000/fanbright/upload"
+        enctype='text/plain'   method="post">
+        <input type="text" name='title'>
+        <br>
+        <input type="file" name='upload'
+          multiple='multiple' >
+        <br>
+        <input type="submit" value='上传文件'>
+      </form>
+    </div>
+  </body>
+</html>

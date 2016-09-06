@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src='/javascripts/showFile.js'></script>
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>这是 <%= title %> 页面</p>
+    <p>下面是下载选项</p>
+    <!-- 图片的地址直接写public内部的即可,不需要写public  -->
+    <!-- <img src="images/1.jpg" alt="图片1" /> -->
+
+    <!--设置download属性可以将链接设置为下载  -->
+    <p><a href="images/1.jpg" download="">数字1图片下载</a></p>
+    <div id='show_myfile_div'>
+      <!--函数名后要有()括号  -->
+      <input type="button" onclick="show_my_file()" value="显示我的文件">
+      <div id='myfileDiv'></div>
+    </div>
+  </body>
+</html>
