@@ -41,7 +41,7 @@ router.post('/upload',(req,res)=>{
     form.keepExtensions = true;
     form.maxFieldsSize = 2*1024*1024;
     form.parse(req,(err,fields,files)=> {
-      fs.renameSync(files.upload.path,"/home/my/Desktop");
+      fs.renameSync(files.upload.path,"/fanbrightFile/");
       res.writeHead(200,{'content-type':'text/plain'});
 
       res.write('received');

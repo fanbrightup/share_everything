@@ -27,7 +27,7 @@
 
 <!--写入文本自动生成文件区  -->
     <div id='text_upload'>
-      <form action="http://localhost:3000/fanbright/textUpload" method="POST">
+      <form action="/fanbright/textUpload" method="POST">
           <p>在下方的文本框中输入信息,并输入文件名,点击上传即可生成文件</p>
           <textarea name="textContent"  cols="30" rows="10"></textarea>
           <br>
@@ -42,7 +42,7 @@
 
 <!-- 上传 -->
     <div id='upload_myfile_div'>
-      <form class="upload_form" action="http://localhost:3000/fanbright/upload"
+      <form class="upload_form" action="/fanbright/upload"
         enctype='text/plain'   method="post">
         <input type="text" name='title'>
         <br>

@@ -40,7 +40,7 @@ function show_my_file(dirname){
       myfileDiv.innerHTML=data;
     }
   }
-  xhr.open('GET','http://localhost:3000/fanbright/show');
+  xhr.open('GET','/fanbright/show');
   // xhr.open('GET','http://localhost:3000/texts/1.txt');
   xhr.send();
 var myfileDiv = document.getElementById('myfileDiv');
