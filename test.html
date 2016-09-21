@@ -3,8 +3,8 @@
   <head>
     <title><%= title %></title>
     <meta charset="utf-8">
-    <link rel='stylesheet' href='/stylesheets/index_page.css' />
-    <!-- <link rel="stylesheet" href="../public/stylesheets/index_page.css"> -->
+    <!-- <link rel='stylesheet' href='/stylesheets/index_page.css' /> -->
+    <link rel="stylesheet" href="test.css">
     <!-- <link rel="stylesheet" href="../public/stylesheets/footer.css"> -->
 
   </head>
@@ -12,21 +12,17 @@
     <!-- <a href="/fanbright">share_file</a> -->
     <div class="container">
       <header>
-        <img src="images/number_22.jpg" alt="logo" class="weblogo">
+        <img src="../public/images/number_22.jpg" alt="logo" class="weblogo">
         <nav class="nav">
           <ul class="navlist">
             <li>首页</li>
-            <li ><a href="/blog">博客</a></li>
+            <li>博客</li>
             <li>地图</li>
             <li><a href="/fanbright">文件</a></li>
           </ul>
         </nav>
-        <div class="login">
-        <a type="button" onclick="alert('hh')" class="loginbtn">登陆</a><span>/</span>
-        <a type="button" class="loginbtn">注册</span>
-        </div>
       </header>
-      <main class="maincontent">
+      <div class="maincontent">
         <aside class="aside">
           <ul class="asideul">
             <li>1</li>
@@ -80,7 +76,7 @@
             <li>7</li>
           </ul>
         </aside>
-        <div class="right_content">
+        <div class="content">
           <ul class="asideul">
             <li>1</li>
             <li>2</li>
@@ -133,8 +129,8 @@
             <li>7</li>
           </ul>
         </div>
-      </main>
-      <footer class="footer">
+      </div>
+      <footer class="webfooter">
         <span class="copyinfo">
           版权归fanbright所有2016年
         </span>

@@ -1,0 +1,88 @@
+html,
+body{
+  /*background-color: red;*/
+  /*width:100%;*/
+  /*height:100%;*/
+  margin:0px;
+  padding:0px;
+}
+/*设置容器样式*/
+.container{
+  position:relative;
+  margin:0 auto;
+  width:980px;
+  border:1px solid black;
+}
+header{
+  position: relative;
+  top:0px;
+  left:0px;
+  height:100px;
+  border:1px solid red;
+}
+.weblogo{
+  position:absolute;;
+  top:0px;
+  left:0px;
+  width:250px;
+  height:100px;
+  /*display: inline;*/
+  float:left;
+}
+.navlist{
+  list-style:none;
+  position: absolute;
+  left:250px;
+  top:0px;
+  height:100px;
+  margin-top: 0px;
+  line-height:100px;
+}
+.navlist li{
+  height:100px;
+  display: inline;
+  /*float:left;*/
+  margin-left:40px;
+}
+
+/*中间部分main的样式*/
+.maincontent{
+  clear:both;
+  position: relative;
+  /*margin-bottom: 35px;*/
+  /*height:100%;*/
+}
+/*侧边栏的样式*/
+aside{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:150px;
+  height: 100%;
+  /*display: block;*/
+  background-color: red;
+  border-right:solid 2px blue;
+  list-style: none;
+}
+.content{
+  position: relative;;
+  height:100%;
+}
+
+/*    footer信息*/
+/*.footer{
+  position:fixed;
+  bottom:0px;
+}*/
+.webfooter span{
+  display: block;
+  position:absolute;
+  height:35px;
+  width:980px;
+  /*bottom: 0px;*/
+  /*left:0px;*/
+  background-color: blue;
+  text-align: center;
+  line-height: 35px;
+  clear:both;
+}

@@ -8,6 +8,9 @@ var bodyParser = require('body-parser');
 router.get('/', function(req, res, next) {
   res.render('fanbright.ejs',{title:'fanbright'});
 });
+router.get('/blog',function(req,res,next){
+  res.render('blog.ejs');
+})
 router.get('/show',function(req,res,next){
 //  文件名要加public,否则找不到,很奇怪
     var dirname = 'public/fanbrightFile';
