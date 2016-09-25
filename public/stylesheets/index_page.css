@@ -69,14 +69,15 @@ main{
   top:0px;
   width:150px;
   height: 100%;
-  background-color: red;
-  border-right:solid 2px blue;
+  /*background-color: red;*/
+  /*border-right:solid 2px blue;*/
   list-style: none;
 }
 .right_content{
   position: relative;
   margin-left:150px;
   height:100%;
+  font-size: 1.3em;
   /*background-color: blue;*/
 }
 .asideul{

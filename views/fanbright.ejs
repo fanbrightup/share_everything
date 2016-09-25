@@ -20,11 +20,24 @@
     </div>
 
 <!--预览  -->
-    <div id='show_article'>
+    <!-- <div id='show_article'>
       <input type='button' onclick="show_my_article()" value="预览图片">
       <p id='p_article_place'>这是预览的位置</p>
-    </div>
+    </div> -->
 
+    <!-- 上传 -->
+    <div id='upload_myfile_div'>
+      <form class="upload_form" action="fanbright/upload"
+      enctype='multipart/form-data'   method="post">
+      <input type="text" name='title'>
+      <br>
+      <input type="file" name='upload'
+      multiple='multiple' >
+      <br>
+      <input type="submit" value='上传文件'>
+    </form>
+  </div>
+  
 <!--写入文本自动生成文件区  -->
     <div id='text_upload'>
       <form action="/fanbright/textUpload" method="POST">
@@ -40,17 +53,5 @@
 
 
 
-<!-- 上传 -->
-    <div id='upload_myfile_div'>
-      <form class="upload_form" action="fanbright/upload"
-        enctype='multipart/form-data'   method="post">
-        <input type="text" name='title'>
-        <br>
-        <input type="file" name='upload'
-          multiple='multiple' >
-        <br>
-        <input type="submit" value='上传文件'>
-      </form>
-    </div>
   </body>
 </html>
